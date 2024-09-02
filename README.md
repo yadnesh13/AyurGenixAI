@@ -128,12 +128,19 @@ python recommendation/formulation_engine.py
 ```
 
 ### CSV File Columns
+- `Herb Name`
+- `Parts Used in Treatment`
 - `Disease`
+- `Symptoms/Condition`
+- `Therapeutic Uses`
 - `Formulation`
-- `Pharmacological Property`
 - `Dosage`
 - `Administration Guidelines`
-
+- `Pharmacological Property`
+- `Side Effects`
+- `Prakriti`
+- `Dosha`
+  
 ## Accessing the Website
 
 ## Contributing
