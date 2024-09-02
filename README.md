@@ -135,7 +135,6 @@ python recommendation/formulation_engine.py
 - `Administration Guidelines`
 
 ## Accessing the Website
-After running the Streamlit application, you can access the AyurGenixAI interface through the local server URL displayed in your terminal.
 
 ## Contributing
 Contributions to the project are welcome! Feel free to submit pull requests, report issues, or suggest enhancements to improve AyurGenixAI.
