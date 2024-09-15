@@ -127,7 +127,7 @@ Run the `formulation_engine.py` script to generate Ayurvedic drug and formulatio
 python recommendation/formulation_engine.py
 ```
 
-### CSV File Columns
+## CSV File Columns
 - `Herb Name`
 - `Parts Used in Treatment`
 - `Disease`
@@ -140,6 +140,76 @@ python recommendation/formulation_engine.py
 - `Side Effects`
 - `Prakriti`
 - `Dosha`
+
+## Documentation Links
+
+### 1. NLP Model - BERT
+- [BERT GitHub](https://github.com/google-research/bert)  
+  **Use**: Provides the implementation of the BERT model, a foundational transformer model for natural language understanding, enabling effective text analysis and feature extraction in Ayurvedic contexts.
+  
+- [BERT Fine-Tuning Guide](https://huggingface.co/transformers/training.html)  
+  **Use**: Offers guidelines for fine-tuning BERT on custom datasets, allowing for improved performance on specific Ayurvedic tasks.
+
+### 2. Contextual Model - Ollama 3
+- [Ollama Documentation](https://ollama.com)  
+  **Use**: Provides resources for integrating Ollama’s AI models into applications, enhancing contextual understanding and user interaction in the AyurGenixAI project.
+
+### 3. AI-Powered Analysis - Gemini API
+- [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)  
+  **Use**: Enables the use of advanced AI analysis tools for generating insights, improving the quality of Ayurvedic recommendations and user engagement.
+
+### 4. Backend Development
+Flask
+- [Flask Documentation](https://flask.palletsprojects.com/en/2.3.x/)  
+  **Use**: A micro web framework for Python, used to build lightweight APIs for the AyurGenixAI backend.
+
+- [Flask API Quickstart Guide](https://flask.palletsprojects.com/en/2.3.x/quickstart/#apis)  
+  **Use**: Provides a step-by-step guide to creating APIs with Flask, facilitating rapid development of backend services.
+
+Django
+- [Django Documentation](https://docs.djangoproject.com/en/stable/)  
+  **Use**: A high-level Python web framework that promotes rapid development and clean, pragmatic design, suitable for building robust web applications.
+
+- [Django Rest Framework](https://www.django-rest-framework.org/)  
+  **Use**: An extension of Django that simplifies the creation of RESTful APIs, essential for serving data to the frontend of the AyurGenixAI application.
+
+### 5. Frontend Development - React
+- [React Documentation](https://reactjs.org/docs/getting-started.html)  
+  **Use**: A JavaScript library for building user interfaces, allowing for the creation of interactive and dynamic web applications for AyurGenixAI.
+
+- [Axios in React](https://axios-http.com/docs/intro)  
+  **Use**: A promise-based HTTP client for the browser and Node.js, facilitating easy data fetching and interaction with the backend APIs.
+
+### 6. Database - MongoDB
+- [MongoDB Documentation](https://www.mongodb.com/docs/)  
+  **Use**: A NoSQL database that allows for flexible data storage, ideal for handling diverse Ayurvedic data structures.
+
+- [MongoDB Atlas Setup](https://www.mongodb.com/cloud/atlas)  
+  **Use**: Provides a cloud database solution for easy setup, management, and scaling of the database for the AyurGenixAI project.
+
+### 7. Model Training Frameworks
+  TensorFlow
+- [TensorFlow Documentation](https://www.tensorflow.org/)  
+  **Use**: A powerful open-source framework for building and training machine learning models, suitable for developing AI components in AyurGenixAI.
+
+### 8. Hugging Face - Pretrained Models and Fine-Tuning
+- [Hugging Face](https://huggingface.co/)  
+  **Use**: A platform for accessing a wide range of pretrained models and tools for fine-tuning, particularly useful for NLP tasks in the AyurGenixAI application.
+
+### 9. Deployment Platforms
+  Frontend
+- [Deploying Frontend with Netlify](https://docs.netlify.com/)  
+  **Use**: A platform for deploying static websites and frontend applications, providing continuous deployment and hosting for the React application.
+
+- [Deploying Frontend with Vercel](https://vercel.com/docs)  
+  **Use**: An optimized platform for deploying frontend applications, enhancing performance and user experience for the AyurGenixAI project.
+
+Backend
+- [Deploying Flask on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)  
+  **Use**: A guide for deploying Flask applications to Heroku, simplifying the process of making the backend accessible online.
+
+- [AWS Elastic Beanstalk for Django Deployment](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html)  
+  **Use**: Provides resources for deploying Django applications on AWS, allowing for scalable and reliable hosting of the backend services.
   
 ## Accessing the Website
 
