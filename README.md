@@ -6,16 +6,6 @@
 
 AyurGenixAI is an innovative solution designed to bridge the gap between traditional Ayurvedic medicine and modern healthcare. Utilizing advanced AI technologies, including natural language processing (NLP) and machine learning (ML), AyurGenixAI provides personalized Ayurvedic medication recommendations based on classical texts and user inputs. This integration of ancient wisdom with contemporary medical practices aims to enhance holistic health and wellness.
 
-## Table of Contents
-- [Problem Description](#problem-description)
-- [Solution Provided](#solution-provided)
-- [Features](#features)
-- [Components](#components)
-- [Project Structure](#project-structure)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-
 ## Problem Description
 
 1. Finding reliable and personalized Ayurvedic medication advice is challenging in today's fast-paced world. 
