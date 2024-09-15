@@ -15,6 +15,7 @@ AyurGenixAI is an innovative solution designed to bridge the gap between traditi
 
 1. AyurGenixAI uses advanced NLP and ML technologies to provide personalized Ayurvedic medication recommendations. 
 2. Users can input symptoms into a user-friendly interface to receive precise advice on Ayurvedic remedies, promoting overall health and wellness.
+3. The recommendation can include details such as herbs, dietary changes, lifestyle modifications, and other home remedies.
 
 ## Features
 - **User Input Analysis:** Captures and processes user symptoms and conditions.
@@ -28,45 +29,6 @@ AyurGenixAI is an innovative solution designed to bridge the gap between traditi
 - **Data Processing:** Scripts for preprocessing data and preparing it for model training.
 - **Model Training:** Scripts for training NLP and ML models to analyze symptoms and recommend medications.
 - **Recommendation Engine:** Core logic for generating personalized Ayurvedic medication recommendations.
-
-## Project Structure
-```
-AyurGenixAI/
-├── data/
-│   ├── herbs.csv
-│   ├── symptoms.csv
-│   ├── ayurvedic_formulations.csv
-│   ├── ayurvedic_texts/
-│   │   ├── text1.txt
-│   │   ├── text2.txt
-│   │   └── ...
-│   └── ayurvedic_formulations.csv
-│
-├── models/
-│   ├── symptom_analysis_model.h5
-│   ├── medication_recommendation_model.h5
-│   └── formulation_engine.py
-│
-├── preprocessing/
-│   ├── text_processing.py
-│   ├── nlp_analysis.py
-│   └── combined_preprocessed_text.txt
-│
-├── src/
-│   ├── data_processing.py
-│   ├── model_training.py
-│   ├── recommendation_engine.py
-│   └── formulation_engine.py
-│
-├── recommendation/
-│   ├── recommendation_results.csv
-│
-├── app.py
-├── requirements.txt
-├── environment.yml
-└── README.md
-
-```
 
 ## Setup and Installation
 
