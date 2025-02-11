@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Chat with AyurGenix AI - Personalized Ayurvedic Doctor</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7fafc;
+    }
+
+    /* Chat Page Styling */
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 75vh;
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-header {
+      background-color: #f59e0b;
+      color: white;
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .chat-messages {
+      flex-grow: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background: #fafafa;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .chat-bubble {
+      max-width: 70%;
+      padding: 12px 20px;
+      border-radius: 16px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      line-height: 1.5;
+      background: #f3f4f6;
+      color: #333;
+    }
+
+    .chat-bubble.ai {
+      background-color: #f59e0b;
+      color: white;
+      align-self: flex-start;
+    }
+
+    .chat-bubble.user {
+      background-color: #e2e8f0;
+      color: #333;
+      align-self: flex-end;
+    }
+
+    .chat-input-container {
+      display: flex;
+      padding: 15px;
+      border-top: 1px solid #e5e7eb;
+      background-color: #fff;
+    }
+
+    .chat-input {
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid #d1d5db;
+      font-size: 1rem;
+      margin-right: 10px;
+      transition: border-color 0.3s ease;
+    }
+
+    .chat-input:focus {
+      border-color: #f59e0b;
+    }
+
+    .send-button {
+      background-color: #f59e0b;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .send-button:hover {
+      background-color: #e67e22;
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .chat-header {
+        font-size: 1rem;
+      }
+
+      .chat-container {
+        margin: 20px;
+      }
+
+      .chat-bubble {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="text-gray-800 body-font shadow-sm bg-white sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a href="{% url 'landing_page' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl font-bold">AyurGenix AI</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Chat Container -->
+  <div class="chat-container">
+    <div class="chat-header">
+      Chat with AyurGenix AI
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+      <!-- Chat messages will appear here -->
+      <div class="chat-bubble ai">
+        Hello! How can I assist you today?
+      </div>
+    </div>
+
+    <div class="chat-input-container">
+      <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
+      <button class="send-button" id="send-button">Send</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-gray-600 body-font bg-white border-t border-gray-200 mt-10">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a href="{% url 'landing_page' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">AyurGenix AI</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        © 2025 AyurGenix AI — All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Basic JavaScript for simulating chat interaction
+    const sendButton = document.getElementById('send-button');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+
+    sendButton.addEventListener('click', () => {
+      const userMessage = chatInput.value.trim();
+      
+      if (userMessage) {
+        // Display the user's message
+        const userBubble = document.createElement('div');
+        userBubble.classList.add('chat-bubble', 'user');
+        userBubble.textContent = userMessage;
+        chatMessages.appendChild(userBubble);
+
+        // Scroll to the bottom of the chat
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Clear the input field
+        chatInput.value = '';
+
+        // Simulate a response from AI after a brief delay
+        setTimeout(() => {
+          const aiMessage = 'I have received your message! Let me fetch the best Ayurvedic solution for you.';
+          const aiBubble = document.createElement('div');
+          aiBubble.classList.add('chat-bubble', 'ai');
+          aiBubble.textContent = aiMessage;
+          chatMessages.appendChild(aiBubble);
+
+          // Scroll to the bottom after AI response
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1500); // AI response delay
+      }
+    });
+
+    // Optional: Allow pressing 'Enter' to send the message
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendButton.click();
+      }
+    });
+  </script>
+</body>
+</html>
